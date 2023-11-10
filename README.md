@@ -1,2 +1,2 @@
 ## Mobile_Metherological_Station
-![image info](Mobile_Metherological_Station/Project Layout.png)
+![Alt text](https://assets.digitalocean.com/articles/alligator/boo.svg )
