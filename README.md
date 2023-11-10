@@ -1,2 +1,2 @@
 ## Mobile_Metherological_Station
-![image info](./Project Layout.png)
+![image info](Mobile_Metherological_Station/Project Layout.png)
