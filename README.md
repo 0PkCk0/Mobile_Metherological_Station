@@ -1,4 +1,4 @@
-## Project Layuot
+## Project Layout
 ![Alt text](Project%20Layout.png)
 ## Group divisions
 Cerka Patrick - Camera and Wart communication \
