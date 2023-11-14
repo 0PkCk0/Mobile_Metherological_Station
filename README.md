@@ -1,5 +1,5 @@
-## Project Layout
-![Alt text](Project%20Layout.png)
+## Project Structure
+![Alt text](Project_Structure.png)
 ## Group divisions
 Cerka Patrick - Camera and Uart communication \
 Gore Stefan - Image elaboration and Wifi \
