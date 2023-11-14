@@ -1,5 +1,7 @@
 ## Project Structure
 ![Alt text](Project_Structure.png)
+## Project FSM
+![Alt text](Final_State_Machine.png)
 ## Group divisions
 Cerka Patrick - Camera and Uart communication \
 Gore Stefan - Image elaboration and Wifi \
