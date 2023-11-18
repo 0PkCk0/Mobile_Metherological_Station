@@ -5,7 +5,7 @@
  * For use with the MSP432. */
 
 
-#include "bmp280.h"
+#include <Libraries/BMP280/bmp280.h>
 #include "msp.h"
 
 int8_t calibration_data[CALIB_DATA_WIDTH];
