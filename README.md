@@ -1,10 +1,10 @@
 ## Project Structure
-![Alt text](Project_Structure.png)
+![Alt text](project_flow.jpeg)
 ## Project FSM
 ![Alt text](Final_State_Machine.png)
 ## Group divisions
-Cerka Patrick - Camera and Uart communication \
-Gore Stefan - Image elaboration and Wifi \
-Mattei Filippo - LED status and internal temperature \
-Pietri Francesco - BMP280 and 3D plastic Box 
+Cerka Patrick : Wifi, ThingSpeak (API), Display \
+Gore Stefan : AIMeteoDetection(FreeRTOS) \
+Mattei Filippo : Humidity, Temperature, Led Status, Internal temperature, GPS  \
+Pietri Francesco : Pressure, Temperature, Cloud Detection
 
