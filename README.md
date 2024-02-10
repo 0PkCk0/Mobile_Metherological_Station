@@ -13,7 +13,7 @@ Come installare il necessario e far girare il tutto su pc, magari mettiamo la pr
 ## Getting Started
 Spieghiamo a grandi linee il codice e come capire se si sta facendo tutto giusto
 ## Group divisions
-(Terremo solo i nomi alla fine, se volete useremo username)
+(Terremo solo i nomi alla fine, se volete useremo username) \
 Cerka Patrick : Wifi, ThingSpeak (API), Display \
 Gore Stefan : AIMeteoDetection(FreeRTOS) \
 Mattei Filippo : Humidity, Temperature, Led Status, Internal temperature, GPS  \
