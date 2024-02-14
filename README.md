@@ -5,9 +5,9 @@ For this projecy we used the power of esp32, a microcontroller with an outstandi
 Now let's dig deeper into this project!
 
 ## Project Structure
-![Alt text](project_flow.jpeg)
+![Alt text](images/project_flow.jpeg)
 ## Project FSM
-![Alt text](Final_State_Machine.png)
+![Alt text](images/Final_State_Machine.png)
 ## Components and parts (hardware and software)
 ### Esp32-Cam  
 ![image](https://github.com/0PkCk0/Mobile_Metherological_Station/assets/62013889/bc655117-eaf6-4af7-babf-54ce2f20afbd)
