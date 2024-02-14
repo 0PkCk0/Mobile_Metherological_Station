@@ -15,7 +15,7 @@ Now let's dig deeper into this project!
 #### Pyrex bowl(to make the weather station waterproof)
 ![Alt text](images/pyrex.jpeg)
 #### Esp32-Cam  
-![image](https://github.com/0PkCk0/Mobile_Metherological_Station/assets/62013889/bc655117-eaf6-4af7-babf-54ce2f20afbd)
+![Alt text](images/ESP32-CAM.jpeg)
 #### Esp32-S3 
 ## Layout della repo
 Troveremo un'app che fa una schematizzazione ad albero della repo e la inseriremmo
