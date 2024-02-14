@@ -23,7 +23,7 @@ You can use any IDE which suits you better but we as a team recommend using VSCo
 Troveremo un'app che fa una schematizzazione ad albero della repo e la inseriremmo
 ## Getting Started
 Firstly install the PlatformIO IDE extension on VSCode; \
-Then we need to open our project: you can do it by clicking on the PlatformIO extension, going in the QUICK ACCESS section e go to Projects & Configuration \
+Then we need to open our project: you can do it by clicking on the PlatformIO extension, going in the QUICK ACCESS section e go to Projects & Configuration \\
 <img width="352" alt="image" src="https://github.com/0PkCk0/Mobile_Metherological_Station/assets/62013889/fdbf4a7f-64e6-472d-ac26-0532351be309"> \
 Here we need to click on Create New Project \
 <img width="663" alt="image" src="https://github.com/0PkCk0/Mobile_Metherological_Station/assets/62013889/9d4e5892-60d2-476f-921f-b359a668741e"> \
