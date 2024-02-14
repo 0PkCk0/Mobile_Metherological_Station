@@ -9,10 +9,13 @@ Now let's dig deeper into this project!
 ## Project FSM
 ![Alt text](images/Final_State_Machine.png)
 ## Components and parts (hardware and software)
-### Esp32-Cam  
-![image](https://github.com/0PkCk0/Mobile_Metherological_Station/assets/62013889/bc655117-eaf6-4af7-babf-54ce2f20afbd)
-### Esp32-S3 
+### Software
 
+### Hardware
+
+#### Esp32-Cam  
+![image](https://github.com/0PkCk0/Mobile_Metherological_Station/assets/62013889/bc655117-eaf6-4af7-babf-54ce2f20afbd)
+#### Esp32-S3 
 ## Layout della repo
 Troveremo un'app che fa una schematizzazione ad albero della repo e la inseriremmo
 ## Installation
