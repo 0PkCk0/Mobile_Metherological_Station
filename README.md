@@ -21,10 +21,15 @@ You can use any IDE which suits you better but we as a team recommend using VSCo
 #### Esp32-S3 
 ## Layout della repo
 Troveremo un'app che fa una schematizzazione ad albero della repo e la inseriremmo
-## Installation
-Come installare il necessario e far girare il tutto su pc, magari mettiamo la procedura solo per windows
 ## Getting Started
-Spieghiamo a grandi linee il codice e come capire se si sta facendo tutto giusto
+Firstly install the PlatformIO IDE extension on VSCode; \
+Then we need to open our project: you can do it by clicking on the PlatformIO extension, going in the QUICK ACCESS section e go to Projects & Configuration
+<img width="352" alt="image" src="https://github.com/0PkCk0/Mobile_Metherological_Station/assets/62013889/fdbf4a7f-64e6-472d-ac26-0532351be309">
+Here we need to click on Create New Project
+<img width="663" alt="image" src="https://github.com/0PkCk0/Mobile_Metherological_Station/assets/62013889/9d4e5892-60d2-476f-921f-b359a668741e">
+In the project wizard set these configurations and click finish
+<img width="600" alt="image" src="https://github.com/0PkCk0/Mobile_Metherological_Station/assets/62013889/3b57e867-f2db-4e3a-8541-1d8bb5be8ba7">
+Now you are ready for the coding!
 ## Group divisions
 (Terremo solo i nomi alla fine, se volete useremo username) \
 Cerka Patrick : Wifi, ThingSpeak (API), Display \
