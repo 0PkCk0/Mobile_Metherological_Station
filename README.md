@@ -20,7 +20,7 @@ You can use any IDE which suits you better but we as a team recommend using VSCo
 ![Alt text](images/pyrex.jpeg)
 #### Esp32-Cam  
 ![Alt text](images/ESP32-CAM.jpg)
-#### Esp32-S3 
+#### Esp32-S3 eye 
 ## Layout della repo
 Troveremo un'app che fa una schematizzazione ad albero della repo e la inseriremmo
 ## Getting Started
