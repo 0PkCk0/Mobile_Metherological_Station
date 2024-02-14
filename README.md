@@ -15,7 +15,7 @@ Now let's dig deeper into this project!
 #### Pyrex bowl(to make the weather station waterproof)
 ![Alt text](images/pyrex.jpeg)
 #### Esp32-Cam  
-![Alt text](images/ESP32-CAM.jpeg)
+![Alt text](images/ESP32-CAM.jpg)
 #### Esp32-S3 
 ## Layout della repo
 Troveremo un'app che fa una schematizzazione ad albero della repo e la inseriremmo
