@@ -18,7 +18,7 @@ You can use any IDE which suits you better but we as a team recommend using VSCo
 ### Hardware
 #### Pyrex bowl(to make the weather station waterproof)
 ![Alt text](images/pyrex.jpeg)
-#### Esp32-Cam  
+#### Esp32-Cam(with a fish-eye cam)  
 ![Alt text](images/ESP32-CAM.jpg)
 
 The EspCam requires a power source given that it has not any usb ports and also a serial interface to program the microcontroller \
