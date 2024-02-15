@@ -32,8 +32,6 @@ We opted for an ARDUINO NANO which fits perfectly our purpose.
 ## Layout della repo
 
 ![Alt text](images/undefined.jpg)
-
-
 ## Getting Started
 ### Creating a Project
 Having installed the PlatformIO IDE extension, we need to open our project: you can do it by clicking on the PlatformIO extension, going in the QUICK ACCESS section e go to Projects & Configuration 
