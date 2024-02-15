@@ -29,7 +29,7 @@ We opted for an ARDUINO NANO which fits perfectly our purpose.
 ![Alt text](images/ESP32-S3-EYE-ezgif.com-resize.jpg)
 
 
-## Layout della repo
+## Repository layout
 
 ![Alt text](images/undefined-2.jpg)
 ## Getting Started
