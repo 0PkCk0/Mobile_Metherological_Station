@@ -50,11 +50,13 @@ Now you are ready for the coding!
 ### Building and flashing the project into the microcontrollers
 On VSCode, having the project open, you can see a bar below with many functions. \
 The two functions we need are the verify and upload, respectively the "tick" and the "arrow" \
+
 <img width="345" alt="image" src="https://github.com/0PkCk0/Mobile_Metherological_Station/assets/62013889/9b81150c-6a77-43d4-b8b0-d742a0a97a08"> \
+
 For the code, use the first folder as a reference and start from the main function. You can see the structure of the [repo](#repository-layout) up in this readME
 
 ## Group divisions
 Cerka Patrick : Wifi, ThingSpeak (API), Interrupt \
-Gore Stefan : AIMeteoDetection(FreeRTOS) \
+Gore Stefan : AIMeteoDetection(FreeRTOS), Display \
 Mattei Filippo : Humidity, Temperature, Led Status, Internal temperature, GPS  \
 Pietri Francesco : Pressure, Temperature, Cloud Detection
