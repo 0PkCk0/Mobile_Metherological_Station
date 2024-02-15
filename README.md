@@ -21,6 +21,7 @@ You can use any IDE which suits you better but we as a team recommend using VSCo
 #### Esp32-Cam  
 ![Alt text](images/ESP32-CAM.jpg)
 #### Esp32-S3 eye 
+![Alt text](images/ESP32-S3-EYE-ezgif.com-resize.jpg)
 ## Layout della repo
 Troveremo un'app che fa una schematizzazione ad albero della repo e la inseriremmo
 ## Getting Started
