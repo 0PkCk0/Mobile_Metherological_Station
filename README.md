@@ -7,8 +7,10 @@ Now let's dig deeper into this project!
 
 ## Project Structure
 ![Alt text](images/project_flow.jpeg)
-## Project Layout
-layout
+
+## Repository layout
+
+![Alt text](images/undefined-2.jpg)
 ## Components and parts (hardware and software)
 ### Software
 You can use any IDE which suits you better but we as a team recommend using VSCode with the platformIO extension installed.
@@ -18,11 +20,22 @@ You can use any IDE which suits you better but we as a team recommend using VSCo
 ### Hardware
 #### Pyrex bowl(to make the weather station waterproof)
 ![Alt text](images/pyrex.jpeg)
-#### Esp32-Cam  
+#### Esp32-Cam(with a fish-eye cam)  
 ![Alt text](images/ESP32-CAM.jpg)
+
+The EspCam requires a power source given that it has not any usb ports and also a serial interface to program the microcontroller. \
+We opted for an ARDUINO NANO which fits perfectly our purpose.
+
+![Alt text](images/arduino_nano.jpeg)
+
 #### Esp32-S3 eye 
-## Layout della repo
-Troveremo un'app che fa una schematizzazione ad albero della repo e la inseriremmo
+![Alt text](images/ESP32-S3-EYE-ezgif.com-resize.jpg)
+
+#### Sensors
+BMP280 - temperature, pressure and altitude; \
+DHT11 - Humidity; \
+MQ135 - Smoke detector;
+
 ## Getting Started
 ### Creating a Project
 Having installed the PlatformIO IDE extension, we need to open our project: you can do it by clicking on the PlatformIO extension, going in the QUICK ACCESS section e go to Projects & Configuration 
@@ -38,11 +51,16 @@ In the project wizard set these configurations and click finish
 <img width="600" alt="image" src="https://github.com/0PkCk0/Mobile_Metherological_Station/assets/62013889/3b57e867-f2db-4e3a-8541-1d8bb5be8ba7"> 
 
 Now you are ready for the coding!
-### Through the code
+### Building and flashing the project into the microcontrollers
+On VSCode, having the project open, you can see a bar below with many functions. \
+The two functions we need are the verify and upload, respectively the "tick" and the "arrow" \
+
+<img width="345" alt="image" src="https://github.com/0PkCk0/Mobile_Metherological_Station/assets/62013889/9b81150c-6a77-43d4-b8b0-d742a0a97a08"> \
+
+For the code, use the first folder as a reference and start from the main function. You can see the structure of the [repo](#repository-layout) up in this readME
 
 ## Group divisions
-(Terremo solo i nomi alla fine, se volete useremo username) \
-Cerka Patrick : Wifi, ThingSpeak (API), Display \
-Gore Stefan : AIMeteoDetection(FreeRTOS) \
+Cerka Patrick : Wifi, ThingSpeak (API), Interrupt, Repo \
+Gore Stefan : AIMeteoDetection(FreeRTOS), Display \
 Mattei Filippo : Humidity, Temperature, Led Status, Internal temperature, GPS  \
 Pietri Francesco : Pressure, Temperature, Cloud Detection
