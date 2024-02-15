@@ -7,8 +7,7 @@ Now let's dig deeper into this project!
 
 ## Project Structure
 ![Alt text](images/project_flow.jpeg)
-## Project Layout
-layout
+
 ## Components and parts (hardware and software)
 ### Software
 You can use any IDE which suits you better but we as a team recommend using VSCode with the platformIO extension installed.
