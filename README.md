@@ -8,6 +8,9 @@ Now let's dig deeper into this project!
 ## Project Structure
 ![Alt text](images/project_flow.jpeg)
 
+## Repository layout
+
+![Alt text](images/undefined-2.jpg)
 ## Components and parts (hardware and software)
 ### Software
 You can use any IDE which suits you better but we as a team recommend using VSCode with the platformIO extension installed.
@@ -29,9 +32,6 @@ We opted for an ARDUINO NANO which fits perfectly our purpose.
 ![Alt text](images/ESP32-S3-EYE-ezgif.com-resize.jpg)
 
 
-## Repository layout
-
-![Alt text](images/undefined-2.jpg)
 ## Getting Started
 ### Creating a Project
 Having installed the PlatformIO IDE extension, we need to open our project: you can do it by clicking on the PlatformIO extension, going in the QUICK ACCESS section e go to Projects & Configuration 
