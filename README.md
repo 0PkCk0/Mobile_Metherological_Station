@@ -23,7 +23,7 @@ You can use any IDE which suits you better but we as a team recommend using VSCo
 #### Esp32-Cam(with a fish-eye cam)  
 ![Alt text](images/ESP32-CAM.jpg)
 
-The EspCam requires a power source given that it has not any usb ports and also a serial interface to program the microcontroller \
+The EspCam requires a power source given that it has not any usb ports and also a serial interface to program the microcontroller. \
 We opted for an ARDUINO NANO which fits perfectly our purpose.
 
 ![Alt text](images/arduino_nano.jpeg)
@@ -47,11 +47,14 @@ In the project wizard set these configurations and click finish
 <img width="600" alt="image" src="https://github.com/0PkCk0/Mobile_Metherological_Station/assets/62013889/3b57e867-f2db-4e3a-8541-1d8bb5be8ba7"> 
 
 Now you are ready for the coding!
-### Through the code
+### Building and flashing the project into the microcontrollers
+On VSCode, having the project open, you can see a bar below with many functions. \
+The two functions we need are the verify and upload, respectively the "tick" and the "arrow"
+<img width="345" alt="image" src="https://github.com/0PkCk0/Mobile_Metherological_Station/assets/62013889/9b81150c-6a77-43d4-b8b0-d742a0a97a08">
+For the code, use the first folder as a reference and start from the main function. You can see the structure of the [repo](#repository-layout) up in this readME
 
 ## Group divisions
-(Terremo solo i nomi alla fine, se volete useremo username) \
-Cerka Patrick : Wifi, ThingSpeak (API), Display \
+Cerka Patrick : Wifi, ThingSpeak (API), Interrupt \
 Gore Stefan : AIMeteoDetection(FreeRTOS) \
 Mattei Filippo : Humidity, Temperature, Led Status, Internal temperature, GPS  \
 Pietri Francesco : Pressure, Temperature, Cloud Detection
