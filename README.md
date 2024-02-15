@@ -32,8 +32,8 @@ We opted for an ARDUINO NANO which fits perfectly our purpose.
 ![Alt text](images/ESP32-S3-EYE-ezgif.com-resize.jpg)
 
 #### Sensors
-BMP280 - temperature, pressure and altitude;
-DHT11 - Humidity;
+BMP280 - temperature, pressure and altitude; \
+DHT11 - Humidity; \
 MQ135 - Smoke detector;
 
 ## Getting Started
