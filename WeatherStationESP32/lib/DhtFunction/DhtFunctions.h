@@ -15,6 +15,13 @@
 #define SENSOR_TYPE DHT_TYPE_SI7021
 #endif
 
+typedef struct{
+    float temperature;
+    float humidity;
+}dhtData;
+
+extern dhtData dhd;
+
 esp_err_t dht_read();
 
 #endif

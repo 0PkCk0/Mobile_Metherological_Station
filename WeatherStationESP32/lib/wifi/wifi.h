@@ -17,10 +17,21 @@
 
 #define SSID "RebootYourPc"
 #define PASS "fermifermipsg"
-#define THINGSPEAK_API_KEY "TT5LV7ZSMNDH7HTC"
+#define THINGSPEAK_API_KEY "CE1ZO2IYOX7MSZJ0"
 
-extern float FIELD1_VALUE;
-extern float FIELD2_VALUE;
+typedef struct{
+    float Field_Temperature;
+    float Field_Pressure;
+    float Field_Altitude;
+    float Field_Humidity;
+    float Field_Cloud;
+    float Field_Error;
+    float Filed_Sun;
+    float Field_Sky;
+    float Field_Smoke;
+}ThingspeakData;
+
+extern ThingspeakData tsd;
 
 esp_err_t wifi_connection();
 httpd_handle_t start_webserver(void);

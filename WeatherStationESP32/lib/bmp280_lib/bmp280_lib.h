@@ -1,6 +1,14 @@
 #ifndef __BMP280_LIB__
 #define __BMP280_LIB__
 
+#include <stdio.h>
+#include <freertos/FreeRTOS.h>
+#include <freertos/task.h>
+#include <esp_system.h>
+#include <string.h>
+#include <math.h>
+#include <bmp280.h>
+
 #ifndef APP_CPU_NUM
 #define APP_CPU_NUM PRO_CPU_NUM
 #endif

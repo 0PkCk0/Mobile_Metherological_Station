@@ -1,7 +1,6 @@
 #include "wifi.h"
 
-float FIELD1_VALUE = 0;
-float FIELD2_VALUE = 0;
+ThingspeakData tsd;
 
 static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_base, int32_t event_id, void *event_data)
 {
@@ -58,8 +57,8 @@ esp_err_t send_to_thingspeak() {
         if (client == NULL) {
             vTaskDelay(pdMS_TO_TICKS(10000)); // Delay before retrying
         }
-        char post_data[100];
-        snprintf(post_data, sizeof(post_data), "api_key=%s&field1=%f&field2=%f", THINGSPEAK_API_KEY, FIELD1_VALUE, FIELD2_VALUE);
+        char post_data[200];
+        snprintf(post_data, sizeof(post_data), "api_key=%s&field1=%.2f&field2=%.2f&field3=%.2f&field4=%.2f&field6=%.2f", THINGSPEAK_API_KEY, tsd.Field_Altitude, tsd.Field_Pressure, tsd.Field_Temperature, tsd.Field_Humidity, tsd.Field_Smoke);
         esp_http_client_set_post_field(client, post_data, strlen(post_data));
 
         esp_err_t err = esp_http_client_perform(client);

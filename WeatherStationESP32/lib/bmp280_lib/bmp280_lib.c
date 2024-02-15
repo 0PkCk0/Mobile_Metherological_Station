@@ -1,11 +1,5 @@
-#include <stdio.h>
-#include <freertos/FreeRTOS.h>
-#include <freertos/task.h>
-#include <esp_system.h>
-#include <string.h>
-#include <math.h>
 #include "bmp280_lib.h"
-#include <bmp280.h>
+
 
 data_bmp280 dataBmp280;
 

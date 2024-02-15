@@ -134,6 +134,8 @@ typedef struct {
     float p_sun, p_cloud, p_sky, p_error;
 } SkySplitter;
 
+extern SkySplitter sspl;
+
 HSV rgb2hsv(RGB rgb888);
 
 bool pixel_analysis(HSV hsv, int lowH, int highH, int lowS, int highS, int lowV, int highV);
