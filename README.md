@@ -20,8 +20,16 @@ You can use any IDE which suits you better but we as a team recommend using VSCo
 ![Alt text](images/pyrex.jpeg)
 #### Esp32-Cam  
 ![Alt text](images/ESP32-CAM.jpg)
+
+The EspCam requires a power source given that it has not any usb ports and also a serial interface to program the microcontroller \
+We opted for an ARDUINO NANO which fits perfectly our purpose.
+
+![Alt text](arduino_nano.jpg)
+
 #### Esp32-S3 eye 
 ![Alt text](images/ESP32-S3-EYE-ezgif.com-resize.jpg)
+
+
 ## Layout della repo
 Troveremo un'app che fa una schematizzazione ad albero della repo e la inseriremmo
 ## Getting Started
