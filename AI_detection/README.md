@@ -1,6 +1,4 @@
---DEEP_LEARNING_ON_EDGE_DEVICE--
-
-------------------------------------------------------------------------------
+DEEP_LEARNING_ON_EDGE_DEVICE
 
 Introduction
 The primary objective of this section is to explore the capabilities of the burgeoning field of AI within the constraints of small, efficient devices, similar to those found in embedded systems. Specifically, this involves utilizing an ESP32-EYE (ESP32S3, camera, LCD, and LED) to capture images of the surroundings and perform inference using the MobileNetv1 model.
@@ -14,6 +12,8 @@ ESP32S3-EYE: This is the main hardware component, providing a complete ecosystem
 Power Bank (Optional): This can be used for powering your setup on the go.
 Host with ThinkSpeak Support: You'll need a host that supports ThinkSpeak for data communication.
 I opted for the ESP32S3 because of its compatibility with the TensorFlow Lite Micro library. It's one of the few microcontrollers that support this library, thanks to its ample storage and significant RAM capacity.
+
+-------------------------------------------------------------------------------
 
 Software Requirements
 The primary software used in this project includes:
@@ -40,11 +40,6 @@ The dependencies for this project include:
 TensorFlow
 ESP Cam
 ESP LCD
-
-
-------------------------------------------------------------
-PART OF THE PROJECT LAYOUT
-(Here i will link all the folders and importnat files (not all))
 
 ------------------------------------------------------------
 Weather Detection Model
