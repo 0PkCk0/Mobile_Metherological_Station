@@ -2,7 +2,7 @@
 Organizing something outdoor near your home, with your friends and family can be somewhat frustating due to the unpredictability of the weather. What of a great opportunity to build a metherological station! \
 Thanks to the versatility, portability and a budget-friendly price of embedded systems, you can build your own mobile station, put it in you yard and monitor the weather from your office with little money.
 For this projecy we used the power of esp32, a microcontroller with an outstanding price/value ratio, capable of many things and buyable with as little as 12 euros. Then we opted for the espidf framework instead of the arduino one: this chioce was made on the basis of having more control of the station and this pro outweighted the con of having far less documentation than the latter. \
-Our ultimate purpose is to build a light and cheap metherological station, simple to maintain and transport but also as accurate as possible, in order to be reliable and useful. \
+Our ultimate purpose is to build a light and cheap metherological station, simple to maintain and transport but also as accurate as possible, in order to be reliable and useful. We also built and implemented an experimental AI model to being able to predict the weather more precisely in the future. \
 Now let's dig deeper into this project!
 
 ## Project Structure
@@ -60,7 +60,7 @@ The two functions we need are the verify and upload, respectively the "tick" and
 For the code, use the first folder as a reference and start from the main function. You can see the structure of the [repo](#repository-layout) up in this readME
 
 ## Group divisions
-Cerka Patrick : Wifi, ThingSpeak (API), Interrupt, Repo \
-Gore Stefan : AIMeteoDetection(FreeRTOS), Display \
-Mattei Filippo : Humidity, Temperature, Led Status, Internal temperature, GPS  \
-Pietri Francesco : Pressure, Temperature, Cloud Detection
+Cerka Patrick(0PkCk0) : Wifi, ThingSpeak (API), Interrupt, Repository \
+Gore Stefan(StefanGore) : AIMeteoDetection(FreeRTOS), Display \
+Mattei Filippo(FilippoMattei02) : Humidity, Temperature, Led Status  \
+Pietri Francesco(FrancescoPietri) : Pressure, Temperature, Cloud Detection
