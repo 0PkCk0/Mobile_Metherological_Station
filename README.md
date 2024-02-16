@@ -60,7 +60,7 @@ The two functions we need are the verify and upload, respectively the "tick" and
 For the code, use the first folder as a reference and start from the main function. You can see the structure of the [repo](#repository-layout) up in this readME
 
 ## Group divisions
-Cerka Patrick : Wifi, ThingSpeak (API), Interrupt, Repo \
-Gore Stefan : AIMeteoDetection(FreeRTOS), Display \
-Mattei Filippo : Humidity, Temperature, Led Status, Internal temperature, GPS  \
-Pietri Francesco : Pressure, Temperature, Cloud Detection
+Cerka Patrick(0PkCk0) : Wifi, ThingSpeak (API), Interrupt, Repository \
+Gore Stefan(StefanGore) : AIMeteoDetection(FreeRTOS), Display \
+Mattei Filippo(FilippoMattei02) : Humidity, Temperature, Led Status  \
+Pietri Francesco(FrancescoPietri) : Pressure, Temperature, Cloud Detection
