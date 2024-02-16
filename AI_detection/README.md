@@ -1,11 +1,11 @@
-DEEP_LEARNING_ON_EDGE_DEVICE
+# DEEP LEARNING ON EDGE DEVICE
 
-Introduction
+## Introduction
 The primary objective of this section is to explore the capabilities of the burgeoning field of AI within the constraints of small, efficient devices, similar to those found in embedded systems. Specifically, this involves utilizing an ESP32-EYE (ESP32S3, camera, LCD, and LED) to capture images of the surroundings and perform inference using the MobileNetv1 model.
 
 ------------------------------------------------------------------------------
 
-Hardware Requirements
+## Hardware Requirements
 To complete this project, you'll need the following components:
 
 ESP32S3-EYE: This is the main hardware component, providing a complete ecosystem for your embedded system.
@@ -15,26 +15,28 @@ I opted for the ESP32S3 because of its compatibility with the TensorFlow Lite Mi
 
 -------------------------------------------------------------------------------
 
-Software Requirements
+## Software Requirements
 The primary software used in this project includes:
 
-ESP-IDF: This is the main software development framework. It can be used as a standalone tool or as an extension.
+### ESP-IDF: This is the main software development framework. It can be used as a standalone tool or as an extension.
 Visual Studio Code (Optional): This is a popular code editor. While optional, it can greatly enhance the development experience.
 (Note: Installing ESP-IDF as an extension, especially in tools like Visual Studio and Eclipse, is easier.)
 
-Installation and Configuration
+### Installation and Configuration
 Installation instructions can be found at [URL]. I recommend installing it with Visual Studio Code, as all my documentation is based on this setup.
 Once installed, follow these steps:
 
-Create a new project, ensuring that the target device is set to ESP32S3 via USB to avoid potential errors.
+### Create a new project, ensuring that the target device is set to ESP32S3 via USB to avoid potential errors.
 Choose a simple "hello world" project template from the ESP repositories and modify it to suit your needs.
 
-Libraries/Dependencies
+### Libraries/Dependencies
 There are two main ways to add libraries to your project:
 
-Direct Download: You can directly download the required libraries using the following command in the ESP-IDF terminal:
-idf.py download ...
-Or write inside the file sdkbuild...
+#### Direct Download: 
+You can directly download the required libraries using the following command in the ESP-IDF terminal: \
+idf.py download ... \
+Or 
+#### write inside the file sdkbuild...
 
 The dependencies for this project include:
 TensorFlow
@@ -42,14 +44,14 @@ ESP Cam
 ESP LCD
 
 ------------------------------------------------------------
-Weather Detection Model
+## Weather Detection Model
 The weather_detection_model.* file houses the TensorFlow Lite model converted into binaries and encapsulated within a C array. The conversion process is outlined in the file, detailing how the TensorFlow Lite model is prepared for integration into the project.
 
 ---------------------------------------------------------------------------------
-Model Settings
+## Model Settings
 Within model_settings.*, essential constants utilized across the entire project are defined. These constants include the output labels of the model and the dimensions of the video feed from the camera.
 --------------------------------------------------------------------
-Main Functions
+## Main Functions
 In main_functions.*, the core implementation of the AI model is found.
 model_setup_configuration(): This function aims to initialize the AI model, preparing it for inference on images captured by the ESP-Eye camera.
 Utilizing tflite::GetModel(), the AI model is loaded into memory.
@@ -86,7 +88,7 @@ Camera Pin Configuration: Various pins related to the camera are configured here
 Sensor Initialization: The sensor is initialized within these files, ensuring that it is ready to capture images and interface with other components of the system
 -------------------------------------------------------
 
-MODEL TRAINING
+## MODEL TRAINING
 The main goal of this project was to put a machine learning model onto a small embedded system, rather than creating a fancy, complex AI model from scratch. I used a platform called EdgeImpulse for this task. It's great for quickly uploading labeled data and training models efficiently. I chose it over traditional Jupyter notebooks because it's much faster. Since I needed to try out several models due to memory constraints on the ESP32 devicE.
 
 After training, I settled on using MobileNetV1, a well-known and reliable model known for its efficiency. It's particularly good for devices with limited resources.
