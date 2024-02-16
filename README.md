@@ -10,7 +10,7 @@ Now let's dig deeper into this project!
 
 ## Repository layout
 
-![Alt text](images/undefined-2.jpg)
+![Alt text](images/undefined-3.jpg)
 ## Components and parts (hardware and software)
 ### Software
 You can use any IDE which suits you better but we as a team recommend using VSCode with the platformIO extension installed.
