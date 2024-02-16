@@ -8,9 +8,7 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "driver/uart.h"
-#include "sdmmc_cmd.h"
 #include "driver/sdmmc_host.h"
-#include "esp_vfs_fat.h"
 #include "esp_camera.h"
 
 #ifndef portTICK_RATE_MS

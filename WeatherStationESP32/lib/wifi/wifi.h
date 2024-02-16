@@ -18,6 +18,7 @@
 #define SSID "RebootYourPc"
 #define PASS "fermifermipsg"
 #define THINGSPEAK_API_KEY "CE1ZO2IYOX7MSZJ0"
+#define THINGSPEAK_API_KEY_1 "29IJTIJ0F8UNHUQ5"
 
 typedef struct{
     float Field_Temperature;
@@ -32,6 +33,7 @@ typedef struct{
 }ThingspeakData;
 
 extern ThingspeakData tsd;
+extern uint8_t WifiStatus; 
 
 esp_err_t wifi_connection();
 httpd_handle_t start_webserver(void);
