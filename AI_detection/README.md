@@ -23,7 +23,7 @@ Visual Studio Code (Optional): This is a popular code editor. While optional, it
 (Note: Installing ESP-IDF as an extension, especially in tools like Visual Studio and Eclipse, is easier.)
 
 ### Installation and Configuration
-Installation instructions can be found at https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/. I recommend installing it with Visual Studio Code, as all my documentation is based on this setup.
+Installation instructions can be found at https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/. I recommend installing it with Visual Studio Code, as all my code is based on this setup.
 
 ### Libraries/Dependencies
 There are two main ways to add libraries to your project:
