@@ -48,8 +48,10 @@ ESP LCD
 The weather_detection_model.* file houses the TensorFlow Lite model converted into binaries and encapsulated within a C array. The conversion process is outlined in the file, detailing how the TensorFlow Lite model is prepared for integration into the project.
 
 ---------------------------------------------------------------------------------
+
 ## Model Settings
 Within model_settings.*, essential constants utilized across the entire project are defined. These constants include the output labels of the model and the dimensions of the video feed from the camera.
+
 --------------------------------------------------------------------
 ## Main Functions
 In main_functions.*, the core implementation of the AI model is found.
