@@ -23,22 +23,10 @@ Visual Studio Code (Optional): This is a popular code editor. While optional, it
 (Note: Installing ESP-IDF as an extension, especially in tools like Visual Studio and Eclipse, is easier.)
 
 ### Installation and Configuration
-Installation instructions can be found at [URL]. I recommend installing it with Visual Studio Code, as all my documentation is based on this setup.
-Once installed, follow these steps:
-
-### Create a new project, ensuring that the target device is set to ESP32S3 via USB to avoid potential errors.
-Choose a simple "hello world" project template from the ESP repositories and modify it to suit your needs.
+Installation instructions can be found at https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/. I recommend installing it with Visual Studio Code, as all my documentation is based on this setup.
 
 ### Libraries/Dependencies
 There are two main ways to add libraries to your project:
-
-#### Direct Download: 
-You can directly download the required libraries using the following command in the ESP-IDF terminal: \
-idf.py download ... \
-Or 
-#### write inside the file sdkbuild...
-
-The dependencies for this project include:
 TensorFlow
 ESP Cam
 ESP LCD
