@@ -6,7 +6,7 @@ Our ultimate purpose is to build a light and cheap metherological station, simpl
 Now let's dig deeper into this project!
 
 ## Project Structure
-![Alt text](images/project_flow.jpeg)
+![Alt text](images/Workflow.png)
 
 ## Repository layout
 
