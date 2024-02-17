@@ -13,6 +13,7 @@
 #define APP_CPU_NUM PRO_CPU_NUM
 #endif
 
+//I2c Pins
 #define I2C_MASTER_SDA 15
 #define I2C_MASTER_SCL 14
 

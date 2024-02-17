@@ -2,6 +2,7 @@
 
 SkySplitter sspl;
 
+//Convert a pixel from RGB888 to HSV space color
 HSV rgb2hsv(RGB rgb888)
 {
     HSV hsv;
@@ -13,7 +14,6 @@ HSV rgb2hsv(RGB rgb888)
     float min = (r < g) ? (r < b ? r : b) : (g < b ? g : b);
     float delta = max - min;
 
-    // Calcola Hue
     if (delta == 0) {
         hsv.h = 0;
     } else if (max == r) {
@@ -25,15 +25,14 @@ HSV rgb2hsv(RGB rgb888)
     }
     hsv.h = hsv.h/2;
 
-    // Calcola Saturation
     hsv.s = max == 0 ? 0 : (delta / max) * 255;
 
-    // Calcola Value
     hsv.v = max * 255;
 
     return hsv;
 }
 
+//Check if a pixel is into the HSV color range
 bool pixel_analysis(HSV hsv, int lowH, int highH, int lowS, int highS, int lowV, int highV){
     //printf("h=%.2f s=%.2f v=%.2f", hsv.h, hsv.s, hsv.v);
     if(hsv.h>=lowH && hsv.h<=highH && hsv.s>=lowS && hsv.s<=highS && hsv.v>=lowV && hsv.v<=highV){
@@ -43,6 +42,7 @@ bool pixel_analysis(HSV hsv, int lowH, int highH, int lowS, int highS, int lowV,
     }
 }
 
+//Convert each pixel of the image from RGB565->RGB888->HSV and classifie it as cloud/sun/sky/error
 void pic_analysis(camera_fb_t *pic){
     RGB rgb;
     sspl.cloud=0;

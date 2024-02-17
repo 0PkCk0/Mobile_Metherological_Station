@@ -5,6 +5,7 @@ data_bmp280 dataBmp280;
 
 bmp280_t dev;
 
+//Inizialize the i2c connection with the Bmp280
 void bmp280_setup(){
     ESP_ERROR_CHECK(i2cdev_init());
     bmp280_params_t params;
@@ -17,6 +18,7 @@ void bmp280_setup(){
     printf("BMP280: found BMP280\n");
 }
 
+//Enable bmp280 sleep mode
 void bmp280_sleep(){
     bmp280_params_t params;
     bmp280_init_default_params(&params);
@@ -24,12 +26,14 @@ void bmp280_sleep(){
     ESP_ERROR_CHECK(bmp280_init(&dev, &params));
 }
 
+//Awake Bmp280 from sleep mode
 void bmp280_awake(){
     bmp280_params_t params;
     bmp280_init_default_params(&params);
     ESP_ERROR_CHECK(bmp280_init(&dev, &params));
 }
 
+//Read pressure, temperature and calculate altitude. the comminucation is based on I2c protocol
 esp_err_t bmp280_read()
 {
     vTaskDelay(pdMS_TO_TICKS(1000));
