@@ -57,7 +57,7 @@ The two functions we need are the verify and upload, respectively the "tick" and
 
 <img width="345" alt="image" src="https://github.com/0PkCk0/Mobile_Metherological_Station/assets/62013889/9b81150c-6a77-43d4-b8b0-d742a0a97a08"> \
 
-For the code, You can use the first and the second folder as references with their respective readME's. You can see the structure of the [repo](#repository-layout) up in this readME
+## Code
 
 ## Group divisions
 Cerka Patrick(0PkCk0) : Wifi, ThingSpeak (API), Interrupt, Repository \
