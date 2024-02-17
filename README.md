@@ -61,6 +61,6 @@ For the code, use the first folder as a reference and start from the main functi
 
 ## Group divisions
 Cerka Patrick(0PkCk0) : Wifi, ThingSpeak (API), Interrupt, Repository \
-Gore Stefan(StefanGore) : AIMeteoDetection(FreeRTOS), Display \
+Gore Stefan(StefanGore) : AIMeteoDetection, Display \
 Mattei Filippo(FilippoMattei02) : Humidity, Temperature, Led Status  \
 Pietri Francesco(FrancescoPietri) : Pressure, Temperature, Cloud Detection
