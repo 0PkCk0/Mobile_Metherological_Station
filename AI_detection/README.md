@@ -58,8 +58,8 @@ Utilizing tflite::GetModel(), the AI model is loaded into memory.
 An important aspect is the initialization of the static tflite::MicroMutableOpResolver<5> micro_op_resolver;. Allocating the correct amount of memory to execute the model is crucial. Pay close attention to constexpr int kTensorArenaSize = 104 * 1024; to prevent errors during execution.
 
 ---------------------------------------------------------------------------
-The image_provider.* module comprises several functionalities crucial for image processing within our application:
-
+## image_provider.* 
+This module comprises several functionalities crucial for image processing within our application:
 Camera Initialization: app_camera_init initializes the camera to capture images.
 Buffer Allocation: We allocate a buffer to store pixels for display on the LCD screen.
 GetImage Function: This function, GetImage, holds significant importance as it determines which pixels are fed into the model and which are displayed on LCD.
@@ -76,16 +76,19 @@ These r, g, and b values are then stored within image_data, which serves as the 
 
 ------------------------------------------------------------------------
 
-The detection_responder.* module contains the function responsible for post-inference tasks, such as printing the results of image classification.
+## detection_responder.*
+The module contains the function responsible for post-inference tasks, such as printing the results of image classification.
 This module:
 Handles the processing of results obtained from the inference process.
 Prints the classification results to an output stream or display.
 
 --------------------------------------------------------------------------
-The app_camera_esp.* files serve as the cornerstone for configuring the camera pins and initializing the sensor.
+## app_camera_esp.* 
+These files serve as the cornerstone for configuring the camera pins and initializing the sensor.
 These files encompass:
 Camera Pin Configuration: Various pins related to the camera are configured here to ensure proper communication and functionality.
 Sensor Initialization: The sensor is initialized within these files, ensuring that it is ready to capture images and interface with other components of the system
+
 -------------------------------------------------------
 
 ## MODEL TRAINING
