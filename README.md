@@ -95,10 +95,40 @@ p0 = reference pressure at sea level (e.g. 1013.25hPa, ajust it based on your lo
 Drivers Used:
 https://github.com/UncleRus/esp-idf-lib
 
-###DHT11:
+### DHT11:
+
+General Specification:
+Operating Voltage: 3.3V
+Humidity Range: 20% to 90%
+Accuracy: +-5%
+
+Communication Protocol ESP32cam ←→ DHT11:
+Note:
+A suitable pull-up resistor should be connected to the selected GPIO line (We have abilitated the internal Pull-up resistor of GPIO 2)
+
+   __           ______          _______                              ___________________________
+     \    A    /      \   C    /       \   DHT duration_data_low    /                           \
+      \_______/   B    \______/    D    \__________________________/   DHT duration_data_high    \__
+ 
+Initializing communications with the DHT requires four 'phases' as follows:
+ 
+Phase A - MCU pulls signal low for at least 18000 us
+Phase B - MCU allows signal to float back up and waits 20-40us for DHT to pull it low
+Phase C - DHT pulls signal low for ~80us
+Phase D - DHT lets signal float back up for ~80us
+ 
+After this, the DHT transmits its first bit by holding the signal low for 50us
+and then letting it float back high for a period of time that depends on the data bit.
+duration_data_high is shorter than 50us for a logic '0' and longer than 50us for logic '1'.
+
+There are a total of 40 data bits transmitted sequentially. These bits are read into a byte array
+of length 5.  The first and third bytes are humidity (%) and temperature (C), respectively.  Bytes 2 and 4
+are zero-filled and the fifth is a checksum such that:
+ 
+byte_5 == (byte_1 + byte_2 + byte_3 + byte_4) & 0xFF
 
 
-
+   
 ## Group divisions
 Cerka Patrick(0PkCk0) : Wifi, ThingSpeak (API), Repository \
 Gore Stefan(StefanGore) : AIMeteoDetection, Display \
