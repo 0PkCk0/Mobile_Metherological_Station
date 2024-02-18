@@ -127,6 +127,9 @@ are zero-filled and the fifth is a checksum such that:
  
 byte_5 == (byte_1 + byte_2 + byte_3 + byte_4) & 0xFF
 
+Drivers Used:
+https://github.com/UncleRus/esp-idf-lib
+
 ### MhMq135
 
 General Specification:
@@ -137,7 +140,6 @@ Communication Protocol:
 The digital output of the MQ135 is setted to 1 when the number of toxic substance is below a threshold and 0 when is above. The threshold is determined by a potentiometer on chip.
 Since the sensor need to be preheated for at least 1 minute, the first lecture should be done after at least that time.
 
-   
 ## Group divisions
 Cerka Patrick(0PkCk0) : Wifi, ThingSpeak (API), Repository \
 Gore Stefan(StefanGore) : AIMeteoDetection, Display \
