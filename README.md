@@ -140,7 +140,7 @@ Communication Protocol:
 The digital output of the MQ135 is setted to 1 when the number of toxic substance is below a threshold and 0 when is above. The threshold is determined by a potentiometer on chip.
 Since the sensor need to be preheated for at least 1 minute, the first lecture should be done after at least that time.
 ## Video and presentation
-### [Presentation]([URL](https://prezi.com/view/psKmNETbN1d7AcHLGIIs/))
+### [Presentation](https://prezi.com/view/psKmNETbN1d7AcHLGIIs/)
 (link video)
 ## Group members
 Cerka Patrick(0PkCk0) : Wifi, ThingSpeak (API), Repository \
