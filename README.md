@@ -72,7 +72,7 @@ Particularly, the C program takes a picture and saves it in a RGB565 standard an
 
 Once we have the HSV value of the pixel we just classifie it using the HSV ranges discovered using the python program. Eventually, when all 320x240 pixels are classified we calculate the relative percentage.
 
-![Alt text](images/CloudDetector.png)
+![Alt text](images/CloudDetection.png)
 
 ### BMP280:
 
