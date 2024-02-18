@@ -6,7 +6,7 @@ Our ultimate purpose is to build a light and cheap metherological station, simpl
 Now let's dig deeper into this project!
 
 ## Project Structure
-![Alt text](images/project_flow.jpeg)
+![Alt text](images/Workflow.png)
 
 ## Repository layout
 
@@ -57,10 +57,91 @@ The two functions we need are the verify and upload, respectively the "tick" and
 
 <img width="345" alt="image" src="https://github.com/0PkCk0/Mobile_Metherological_Station/assets/62013889/9b81150c-6a77-43d4-b8b0-d742a0a97a08"> \
 
-For the code, use the first folder as a reference and start from the main function. You can see the structure of the [repo](#repository-layout) up in this readME
+## Code
+
+### Cloud Detection
+
+We decided to use the integrated camera of the ESP32cam in order to create a simple and lightweight algorithm for the analysis of the sky above the weather station. The program returns the percentage of Sun, Sky, Cloud, Error (things that don't belong to the sky).
+
+First of all, we took many pictures of the sky using an OV2640 fish eye camera installed on the ESP32cam under different types of weather and light conditions. Then, using a python program and the library OpenCV for image processing we estimated the HSV range for Cloud, Sun and Sky.
+
+We used the HSV color space since it is more robust towards external lighting changes and is often used in computer vision and image processing instead of RGB.
+
+Once the program in python was completed we created a lightweight version in C without  using open CV (way too heavy for our project).
+Particularly, the C program takes a picture and saves it in a RGB565 standard and returns a pointer to the frame buffer of the image. Then, we access pixel by pixel using the pointer, we convert it in RGB888 and then we convert it in HSV (using the same ranges of OpenCV H: 0-180 S: 0-255 V: 0-255).
+
+Once we have the HSV value of the pixel we just classifie it using the HSV ranges discovered using the python program. Eventually, when all 320x240 pixels are classified we calculate the relative percentage.
+
+![Alt text](images/CloudDetection.png)
+
+### BMP280:
+
+General Specifications:
+Operating Voltage: 1.71V to 3.6V
+Operating Temperature: -40°C to 85°C.
+Operating Pressure: 300hPa to 1100hPa.
+
+Communication Protocol ESP32cam ←→ BMP280:
+We decided to use the I2C protocol since it uses less wires than the SPI and provides an optimal speed and reliability for our application.
+Even more, ESP32cam has a really poor number of GPIO pins and the default I2C pins are used by the camera, so we used the pins 14 (SCL) and 15 (SDA) by properly enabling the pull-up resistors.
+
+The altitude is derived from the pressure using the international barometric formula, so it should be considered approssimative.
+H = 44330 * [1 - (P/p0)^(1/5.255) ]
+
+H = altitude (m)
+P = measured pressure (Pa) from the sensor
+p0 = reference pressure at sea level (e.g. 1013.25hPa, ajust it based on your location for higher precision)
+
+Drivers Used:
+https://github.com/UncleRus/esp-idf-lib
+
+### DHT11:
+
+General Specification:
+Operating Voltage: 3.3V
+Humidity Range: 20% to 90%
+Accuracy: +-5%
+
+Communication Protocol ESP32cam ←→ DHT11:
+Note:
+A suitable pull-up resistor should be connected to the selected GPIO line (We have abilitated the internal Pull-up resistor of GPIO 2)
+
+    __           ______          _______                              ___________________________
+     \    A    /      \   C    /       \   DHT duration_data_low    /                           \
+      \_______/   B    \______/    D    \__________________________/   DHT duration_data_high    \__
+ 
+Initializing communications with the DHT requires four 'phases' as follows:
+ 
+Phase A - MCU pulls signal low for at least 18000 us
+Phase B - MCU allows signal to float back up and waits 20-40us for DHT to pull it low
+Phase C - DHT pulls signal low for ~80us
+Phase D - DHT lets signal float back up for ~80us
+ 
+After this, the DHT transmits its first bit by holding the signal low for 50us
+and then letting it float back high for a period of time that depends on the data bit.
+duration_data_high is shorter than 50us for a logic '0' and longer than 50us for logic '1'.
+
+There are a total of 40 data bits transmitted sequentially. These bits are read into a byte array
+of length 5.  The first and third bytes are humidity (%) and temperature (C), respectively.  Bytes 2 and 4
+are zero-filled and the fifth is a checksum such that:
+ 
+byte_5 == (byte_1 + byte_2 + byte_3 + byte_4) & 0xFF
+
+Drivers Used:
+https://github.com/UncleRus/esp-idf-lib
+
+### MhMq135
+
+General Specification:
+Operating voltage: 5 V
+Detects: NH3, NOx, alcohol, Benzene, smoke, CO2, etc.
+
+Communication Protocol:
+The digital output of the MQ135 is setted to 1 when the number of toxic substance is below a threshold and 0 when is above. The threshold is determined by a potentiometer on chip.
+Since the sensor need to be preheated for at least 1 minute, the first lecture should be done after at least that time.
 
 ## Group divisions
-Cerka Patrick(0PkCk0) : Wifi, ThingSpeak (API), Interrupt, Repository \
+Cerka Patrick(0PkCk0) : Wifi, ThingSpeak (API), Repository \
 Gore Stefan(StefanGore) : AIMeteoDetection, Display \
-Mattei Filippo(FilippoMattei02) : Humidity, Temperature, Led Status  \
-Pietri Francesco(FrancescoPietri) : Pressure, Temperature, Cloud Detection
+Mattei Filippo(FilippoMattei02) : Humidity, Air Quality, Led Status  \
+Pietri Francesco(FrancescoPietri) : Pressure, Temperature, Altitude, Cloud Detection
