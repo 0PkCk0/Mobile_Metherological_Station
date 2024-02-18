@@ -106,7 +106,7 @@ Communication Protocol ESP32cam ←→ DHT11:
 Note:
 A suitable pull-up resistor should be connected to the selected GPIO line (We have abilitated the internal Pull-up resistor of GPIO 2)
 
-   __           ______          _______                              ___________________________
+    __           ______          _______                              ___________________________
      \    A    /      \   C    /       \   DHT duration_data_low    /                           \
       \_______/   B    \______/    D    \__________________________/   DHT duration_data_high    \__
  
@@ -127,6 +127,15 @@ are zero-filled and the fifth is a checksum such that:
  
 byte_5 == (byte_1 + byte_2 + byte_3 + byte_4) & 0xFF
 
+### MhMq135
+
+General Specification:
+Operating voltage: 5 V
+Detects: NH3, NOx, alcohol, Benzene, smoke, CO2, etc.
+
+Communication Protocol:
+The digital output of the MQ135 is setted to 1 when the number of toxic substance is below a threshold and 0 when is above. The threshold is determined by a potentiometer on chip.
+Since the sensor need to be preheated for at least 1 minute, the first lecture should be done after at least that time.
 
    
 ## Group divisions
