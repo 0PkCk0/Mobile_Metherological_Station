@@ -139,8 +139,10 @@ Detects: NH3, NOx, alcohol, Benzene, smoke, CO2, etc.
 Communication Protocol:
 The digital output of the MQ135 is setted to 1 when the number of toxic substance is below a threshold and 0 when is above. The threshold is determined by a potentiometer on chip.
 Since the sensor need to be preheated for at least 1 minute, the first lecture should be done after at least that time.
-
-## Group divisions
+## Video and presentation
+### [Presentation]([URL](https://prezi.com/view/psKmNETbN1d7AcHLGIIs/))
+(link video)
+## Group members
 Cerka Patrick(0PkCk0) : Wifi, ThingSpeak (API), Repository \
 Gore Stefan(StefanGore) : AIMeteoDetection, Display \
 Mattei Filippo(FilippoMattei02) : Humidity, Air Quality, Led Status  \
