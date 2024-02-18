@@ -15,6 +15,8 @@
 #define SENSOR_TYPE DHT_TYPE_SI7021
 #endif
 
+#define DHT_PIN 2
+
 typedef struct{
     float temperature;
     float humidity;

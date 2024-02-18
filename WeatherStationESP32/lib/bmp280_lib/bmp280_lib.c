@@ -33,7 +33,7 @@ void bmp280_awake(){
     ESP_ERROR_CHECK(bmp280_init(&dev, &params));
 }
 
-//Read pressure, temperature and calculate altitude. the comminucation is based on I2c protocol
+//Read pressure, temperature and calculate altitude. the communication is based on I2c protocol
 esp_err_t bmp280_read()
 {
     vTaskDelay(pdMS_TO_TICKS(1000));

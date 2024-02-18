@@ -10,7 +10,6 @@ void setupLed(){
 }
 
 void turnBlue(){
-   //primo pin a sinistra
     gpio_set_level(BLUE_PIN, 1);
 }
 

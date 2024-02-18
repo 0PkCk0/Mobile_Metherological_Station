@@ -15,10 +15,10 @@
 #include "esp_http_client.h"
 
 
-#define SSID "RebootYourPc"
-#define PASS "fermifermipsg"
-#define THINGSPEAK_API_KEY "CE1ZO2IYOX7MSZJ0"
-#define THINGSPEAK_API_KEY_1 "29IJTIJ0F8UNHUQ5"
+#define SSID "############"
+#define PASS "############"
+#define THINGSPEAK_API_KEY "############"
+#define THINGSPEAK_API_KEY_1 "############"
 
 typedef struct{
     float Field_Temperature;
