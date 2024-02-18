@@ -59,7 +59,7 @@ The two functions we need are the verify and upload, respectively the "tick" and
 
 ## Code
 
-###Cloud Detection
+### Cloud Detection
 
 We decided to use the integrated camera of the ESP32cam in order to create a simple and lightweight algorithm for the analysis of the sky above the weather station. The program returns the percentage of Sun, Sky, Cloud, Error (things that don't belong to the sky).
 
@@ -72,9 +72,9 @@ Particularly, the C program takes a picture and saves it in a RGB565 standard an
 
 Once we have the HSV value of the pixel we just classifie it using the HSV ranges discovered using the python program. Eventually, when all 320x240 pixels are classified we calculate the relative percentage.
 
-![Alt text](images/CloudDetector.jpg)
+![Alt text](images/CloudDetector.png)
 
-###BMP280:
+### BMP280:
 
 General Specifications:
 Operating Voltage: 1.71V to 3.6V
