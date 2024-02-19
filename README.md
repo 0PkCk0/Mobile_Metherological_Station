@@ -18,7 +18,7 @@ You can use any IDE which suits you better but we as a team recommend using VSCo
 <img width="298" alt="image" src="https://github.com/0PkCk0/Mobile_Metherological_Station/assets/62013889/f3d8d0d5-9367-47af-8279-133ea0da6c3e">
 
 ### Hardware
-#### Pyrex bowl(to make the weather station waterproof)
+#### Pyrex bowl (to make the weather station waterproof)
 ![Alt text](images/pyrex.jpeg)
 #### Esp32-Cam(with a fish-eye cam)  
 ![Alt text](images/ESP32-CAM.jpg)
