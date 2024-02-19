@@ -236,7 +236,7 @@ This made it easy to integrate the model into my C code for the embedded system.
 
 ## Video and presentation
 ### [Presentation](https://prezi.com/view/psKmNETbN1d7AcHLGIIs/)
-(link video)
+### [Video](https://www.youtube.com/watch?v=L7zIJ5Sh3cw)
 ## Group members
 Cerka Patrick(0PkCk0) : Wifi, ThingSpeak (API), Repository \
 Gore Stefan(StefanGore) : AIMeteoDetection \
