@@ -239,6 +239,6 @@ This made it easy to integrate the model into my C code for the embedded system.
 (link video)
 ## Group members
 Cerka Patrick(0PkCk0) : Wifi, ThingSpeak (API), Repository \
-Gore Stefan(StefanGore) : AIMeteoDetection, Display \
-Mattei Filippo(FilippoMattei02) : Humidity, Air Quality, Led Status  \
+Gore Stefan(StefanGore) : AIMeteoDetection \
+Mattei Filippo(FilippoMattei02) : Humidity, Smoke detector, Led Status  \
 Pietri Francesco(FrancescoPietri) : Pressure, Temperature, Altitude, Cloud Detection
