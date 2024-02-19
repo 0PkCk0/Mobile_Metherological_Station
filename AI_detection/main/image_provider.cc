@@ -16,20 +16,24 @@
 
 static const char* TAG = "app_camera";
 static uint16_t *display_buf; // buffer to hold data to be sent to display
-
+#define DISPLAY_SUPPORT 0
 //initialization of the camera modle
 TfLiteStatus InitCamera() {
   if (display_buf == NULL) {
     // Size of display_buf:
     // Frame 96x96 from camera is extrapolated to 192x192. RGB565 pixel format -> 2 bytes per pixel
     //display_buf = (uint16_t *) heap_caps_malloc(96 * 2 * 96 * 2 * sizeof(uint16_t), MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT);
+    #if DISPLAY_SUPPORT
     display_buf = (uint16_t *) heap_caps_malloc(96 * 2 * 96 * 2 * sizeof(uint16_t), MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT);
+    #endif
   }
+  #if DISPLAY_SUPPORT
   if (display_buf == NULL) {
     //esp_log_error
     ESP_LOGE(TAG, "Couldn't allocate display buffer");
     return kTfLiteError;
   }
+  #endif
   int ret = app_camera_init();
   if (ret != 0) {
     MicroPrintf("Camera init failed\n");
@@ -37,6 +41,12 @@ TfLiteStatus InitCamera() {
   }
   return kTfLiteOk;
 }
+
+TfLiteStatus DeinitCamera() {
+  app_camera_deinit();
+  return kTfLiteOk;
+}
+
 
 void *image_provider_get_display_buf()
 {
@@ -76,10 +86,12 @@ TfLiteStatus GetImage(int image_width, int image_height, int channels, int8_t* i
       image_data[index + 2] = b; // Blue channel
 
       // to display, the ALGORITHM IS CALLES IMAGE INTERPOLATION
+      #if DISPLAY_SUPPORT
       display_buf[2 * i * kNumCols * 2 + j * 2] = pixel;
       display_buf[2 * i *  kNumCols * 2 + 2 * j + 1] = pixel;
       display_buf[(2 * i + 1) * kNumCols * 2 + 2 * j] = pixel;
       display_buf[(2 * i + 1) * kNumCols * 2 + 2 * j + 1] = pixel;
+      #endif
     }
   }
   esp_camera_fb_return(fb);

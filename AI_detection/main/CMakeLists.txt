@@ -5,4 +5,5 @@ idf_component_register(SRCS weather_detection_model.cc
                             detection_responder.cc
                             app_camera_esp.cc
                             main.cc
+                            wifi.c
                     INCLUDE_DIRS "")

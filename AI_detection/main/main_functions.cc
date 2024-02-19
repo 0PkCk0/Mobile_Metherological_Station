@@ -18,6 +18,7 @@
 #include <esp_log.h>
 #include "esp_task_wdt.h"
 
+
 #define REAL_TIME_DETECTION 1
 #define COLLECT_CPU_STATS 1
 
@@ -30,9 +31,12 @@ TfLiteTensor* input = nullptr;
 constexpr int kTensorArenaSize = 124 * 1024 ;
 static uint8_t *tensor_arena;
 esp_task_wdt_config_t struct_for_watchdog;
+static tflite::MicroMutableOpResolver<6> micro_op_resolver; 
 }  
 
-void model_setup_configuration() {
+
+
+void static_model_setup_configuration() {
   //to set REAL_TIME_DETECTION = 0 if WE want to change the watchdog timer
   #ifndef REAL_TIME_DETECTION
   struct_for_watchdog.timeout_ms = 10000;
@@ -45,17 +49,8 @@ void model_setup_configuration() {
     return;
   }
 
-  if (tensor_arena == NULL) {
-    tensor_arena = (uint8_t *)heap_caps_malloc(kTensorArenaSize, MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT);
-  }
-  if (tensor_arena == NULL) {
-    printf("Couldn't allocate memory of %d bytes\n", kTensorArenaSize);
-    return;
-  }
-
   //This variable is important to be set correctly, each ai model has some layer/a structure
   //and we need to select the resolver that the model is based on
-  static tflite::MicroMutableOpResolver<8> micro_op_resolver; 
 
   if (micro_op_resolver.AddConv2D() != kTfLiteOk) {
     MicroPrintf("AddConv2D() failed");
@@ -66,12 +61,6 @@ void model_setup_configuration() {
   if (micro_op_resolver.AddSoftmax() != kTfLiteOk) {
     MicroPrintf("AddSoftmax() failed");
   }
-  if ( micro_op_resolver.AddMaxPool2D() != kTfLiteOk) {
-    MicroPrintf("AddMaxPool2D() failed");
-  } 
-  if ( micro_op_resolver.AddReshape()!= kTfLiteOk) {
-    MicroPrintf("AddReshape() failed");
-  } 
   if ( micro_op_resolver.AddDepthwiseConv2D()!= kTfLiteOk) {
     MicroPrintf("AddDepthwiseConv2D() failed");
   } 
@@ -82,8 +71,17 @@ void model_setup_configuration() {
     MicroPrintf("AddMean() failed");
   } 
 
+}
 
-  // Build an interpreter to run the model with.
+void dinamic_model_configuration(){
+  if (tensor_arena == NULL) {
+    tensor_arena = (uint8_t *)heap_caps_malloc(kTensorArenaSize, MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT);
+  }
+  if (tensor_arena == NULL) {
+    printf("Couldn't allocate memory of %d bytes\n", kTensorArenaSize);
+    return;
+  }
+    // Build an interpreter to run the model with.
   static tflite::MicroInterpreter static_interpreter(
       model, micro_op_resolver, tensor_arena, kTensorArenaSize);
   interpreter = &static_interpreter;
@@ -104,11 +102,11 @@ void model_setup_configuration() {
     MicroPrintf("InitCamera failed\n");
     return;
   }
+
 }
 
-
-// The name of this function is important for Arduino compatibility.
-void loop() {
+//the function must return the label of the image
+void inference() {
   // Get image from provider.
   if (kTfLiteOk != GetImage(kNumCols, kNumRows, kNumChannels, input->data.int8)) {
     MicroPrintf("Image capture failed.");
@@ -146,7 +144,14 @@ void loop() {
   // Respond to detection
   RespondToDetection(clear_sky_score_f, patterened_cloud_score_f, thick_dark_cloud_score_f, 
                       thick_white_cloud_score_f, thin_white_cloud_score_f, veil_cloud_score_f);
-  vTaskDelay(5); // to avoid watchdog trigger
+
+  //vTaskDelay(5); // to avoid watchdog trigger
+}
+
+void free_dma_buffer() {
+    // Free memory
+    heap_caps_free(tensor_arena);
+    DeinitCamera();
 }
 
 #if defined(COLLECT_CPU_STATS)

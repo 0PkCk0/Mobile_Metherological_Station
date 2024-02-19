@@ -7,8 +7,11 @@ extern "C" {
 #endif
 
 // Initialization all the data, ai model
-void model_setup_configuration();
-void loop();
+
+void static_model_setup_configuration();
+void inference();
+void free_dma_buffer(); 
+void dinamic_model_configuration();
 
 #ifdef __cplusplus
 }

@@ -58,3 +58,7 @@ int app_camera_init() {
   
   return 0;
 }
+
+void app_camera_deinit(){
+  esp_camera_deinit(); 
+}
