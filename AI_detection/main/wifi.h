@@ -15,8 +15,8 @@
 #include "esp_http_client.h"
 #include "esp_event.h"
 
-#define SSID "Pixel_2820"
-#define PASS "Messagay12"
+#define SSID "##########"
+#define PASS "####à######"
 #define THINGSPEAK_API_KEY_1 "29IJTIJ0F8UNHUQ5"
 
 typedef struct{
