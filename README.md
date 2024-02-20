@@ -315,7 +315,7 @@ If you encounter any issues with the WiFi connection process, consider the follo
 
 ### Contributors
 
-- [Your Name](https://github.com/your_username)
+- [0PkCk0](https://github.com/0PkCk0)
 
 ### License
 
