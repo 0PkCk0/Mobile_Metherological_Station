@@ -34,7 +34,7 @@ We opted for an ARDUINO NANO which fits perfectly our purpose.
 #### Sensors
 BMP280 - temperature, pressure and altitude; \
 DHT11 - Humidity; \
-MQ135 - Smoke detector;
+MQ135 - Smoke detector; \
 Blue Led
 
 ## Getting Started
