@@ -234,6 +234,93 @@ Once the training was done, I downloaded the TensorFlow Lite version of the mode
 xxd tf.tflite > tf.c
 This made it easy to integrate the model into my C code for the embedded system.
 
+## WiFi Connection with ESP32-S3 Eye
+
+This project demonstrates how to establish a WiFi connection using an ESP32-S3 Eye microcontroller without the need for a web server. The code is written in C++ and utilizes the ESP-IDF framework.
+
+### Prerequisites
+
+- ESP-IDF development environment set up
+- ESP32-S3 Eye development board
+
+### Getting Started
+
+1. Clone this repository:
+
+    ```bash
+    git clone <repository_url>
+    ```
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd <project_directory>
+    ```
+
+3. Open the project in your preferred IDE.
+
+4. Ensure that your ESP32-S3 Eye board is connected to your development machine via USB.
+
+5. Build and flash the project to your ESP32-S3 Eye board.
+
+6. Monitor the serial output to observe the WiFi connection process.
+
+### WiFi Connection Process
+
+The WiFi connection process involves the following steps:
+
+1. Initialize the ESP-IDF framework and configure the WiFi connection parameters (SSID and password).
+
+2. Set up event handlers to handle WiFi events such as connection status changes.
+
+3. Start the WiFi connection process.
+
+4. Wait for the ESP32-S3 Eye to connect to the specified WiFi network.
+
+5. Once connected, obtain the IP address assigned to the ESP32-S3 Eye.
+
+6. Monitor the serial output for status updates and confirmation of successful WiFi connection.
+
+### Code Structure
+
+- `main.cpp`: Contains the main application code, including the initialization of the WiFi connection process.
+
+- `wifi_manager.h`: Header file containing the declaration of the `wifi_connection` function.
+
+- `wifi_manager.c`: Source file containing the implementation of the `wifi_connection` function.
+
+### Usage
+
+To use the WiFi connection functionality in your own project, follow these steps:
+
+1. Copy the `wifi_manager.h` and `wifi_manager.c` files into your project directory.
+
+2. Include the `wifi_manager.h` header file in your main application file.
+
+3. Call the `wifi_connection` function from your application code to initiate the WiFi connection process.
+
+4. Monitor the serial output for WiFi connection status updates and IP address assignment.
+
+### Troubleshooting
+
+If you encounter any issues with the WiFi connection process, consider the following troubleshooting steps:
+
+- Check the WiFi network credentials (SSID and password) configured in your code.
+
+- Ensure that your ESP32-S3 Eye board is within range of the WiFi network and that the network is operational.
+
+- Verify that the ESP-IDF development environment is set up correctly and that the necessary components are installed.
+
+- Check the serial output for error messages or status updates that may indicate issues with the WiFi connection process.
+
+### Contributors
+
+- [Your Name](https://github.com/your_username)
+
+### License
+
+This project is licensed under the [MIT License](LICENSE).
+
 
 ## Video and presentation
 ### [Presentation](https://prezi.com/view/psKmNETbN1d7AcHLGIIs/)
