@@ -234,9 +234,9 @@ Once the training was done, I downloaded the TensorFlow Lite version of the mode
 xxd tf.tflite > tf.c
 This made it easy to integrate the model into my C code for the embedded system.
 
-## WiFi Connection with ESP32-S3 Eye
+## WiFi Connection with ESP32-S3
 
-This project demonstrates how to establish a WiFi connection using an ESP32-S3 Eye microcontroller without the need for a web server. The code is written in C++ and utilizes the ESP-IDF framework.
+This project demonstrates how to establish a WiFi connection using an ESP32-S3 microcontroller without the need for a web server. The code is written in C++ and utilizes the ESP-IDF framework.
 
 ### Prerequisites
 
