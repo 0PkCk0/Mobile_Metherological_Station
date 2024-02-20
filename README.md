@@ -323,7 +323,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 
 ## Video and presentation
-### [Presentation](https://prezi.com/view/psKmNETbN1d7AcHLGIIs/)
+### [Presentation](https://prezi.com/view/IZQJTpfCYoVPkQhn2VSF/)
 ### [Video](https://www.youtube.com/watch?v=L7zIJ5Sh3cw)
 ## Group members
 Cerka Patrick(0PkCk0) : Wifi, ThingSpeak (API), Repository \
