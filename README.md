@@ -248,7 +248,7 @@ This project demonstrates how to establish a WiFi connection using an ESP32-S3 E
 1. Clone this repository:
 
     ```bash
-    git clone (https://github.com/0PkCk0/Mobile_Metherological_Station.git)
+    git clone https://github.com/0PkCk0/Mobile_Metherological_Station.git
     ```
 
 2. Navigate to the project directory:
